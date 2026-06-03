@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#140807" />
+  <title>MOSCATELLI Studio — Threshold Final</title>
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!--
+    MOSCATELLI NOIR THRESHOLD STABLE
+    Brand-new file name and standalone build.
+    Verification flag: threshold-final-2026-06-03-i
+
+    Single-file landing page for the Moscatelli Studio digital hub.
+    The triangles are SVG-based, with one shared top/bottom register.
+    Cursor removed; non-functional guide lines remain removed. Hover now uses ceremonial focus: neighbour dimming, smoked-glass sharpening, blurred internal light change, and restrained selection exit. Edit only the href attributes in the five .node-link anchors when the final links are ready.
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=block">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=block">
+
+  <style>
+    :root {
+      --black: #090403;
+      --near-black: #130807;
+      --espresso: #1b0b09;
+      --bruno: #2a120f;
+      --bruno-deep: #1a0b09;
+      --oxblood: #401816;
+      --oxblood-soft: #5b2420;
+      --ivory: #f4eee7;
+      --ivory-soft: rgba(244, 238, 231, .74);
+      --ivory-muted: rgba(244, 238, 231, .46);
+      --ivory-faint: rgba(244, 238, 231, .20);
+      --ivory-ghost: rgba(244, 238, 231, .08);
+      --line: rgba(244, 238, 231, .28);
+      --line-strong: rgba(244, 238, 231, .60);
+      --ease: cubic-bezier(.16, 1, .3, 1);
+      --ease-hover: cubic-bezier(.22, .61, .36, 1);
+      --font-cinzel: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+      --brand-top: clamp(146px, 22.5svh, 206px);
+      --nav-top: clamp(342px, 47svh, 430px);
+      --exit-ms: 560ms;
+      --hover-ms: 640ms;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      background: var(--black);
+      color: var(--ivory);
+    }
+
+    html.no-js body { opacity: 1; }
+
+    body {
+      min-height: 100svh;
+      overflow: hidden;
+      font-family: var(--font-cinzel);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+      isolation: isolate;
+      opacity: 0;
+      transition: opacity 700ms ease;
+      background:
+        radial-gradient(ellipse 58% 46% at 50% 51%, rgba(72, 29, 25, .42) 0%, rgba(52, 19, 16, .23) 34%, transparent 70%),
+        radial-gradient(ellipse 38% 34% at 18% 57%, rgba(95, 43, 36, .18) 0%, transparent 65%),
+        radial-gradient(ellipse 36% 36% at 82% 57%, rgba(72, 27, 23, .17) 0%, transparent 64%),
+        linear-gradient(112deg, #170b09 0%, #090403 34%, #1d0a08 65%, #0b0403 100%);
+      background-size: 118% 118%, 126% 126%, 128% 128%, 100% 100%;
+      background-position: 50% 50%, 18% 57%, 82% 57%, 50% 50%;
+    }
+
+    body.fonts-ready {
+      opacity: 1;
+      animation: livingNoirDrift 48s ease-in-out 1.2s infinite alternate;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -10;
+      pointer-events: none;
+    }
+
+    body::before {
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(244,238,231,.075), transparent 34%),
+        radial-gradient(ellipse at 50% 100%, rgba(0,0,0,.62), transparent 54%),
+        linear-gradient(90deg, rgba(244,238,231,.045), transparent 16%, transparent 84%, rgba(244,238,231,.035));
+      opacity: .58;
+      mix-blend-mode: screen;
+      transform: scale(1.02) translate3d(0, 0, 0);
+      transform-origin: center;
+    }
+
+    body.fonts-ready::before {
+      animation: noirVeilBreath 42s ease-in-out 2s infinite alternate;
+    }
+
+    body::after {
+      opacity: 0;
+      background-image:
+        radial-gradient(circle at 18% 29%, rgba(255,255,255,.42) 0 1px, transparent 1.6px),
+        radial-gradient(circle at 72% 69%, rgba(255,255,255,.30) 0 1px, transparent 1.6px);
+      background-size: 240px 240px, 320px 320px;
+      mix-blend-mode: soft-light;
+      mask-image: radial-gradient(circle at 50% 50%, black 0 58%, transparent 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      position: relative;
+      min-height: 100svh;
+      overflow: hidden;
+      padding: 0 clamp(24px, 4vw, 74px);
+    }
+
+    .ambient-disc {
+      position: absolute;
+      left: 50%;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate3d(-50%, 0, 0);
+    }
+
+    .ambient-disc {
+      top: calc(var(--nav-top) - 62px);
+      width: min(1040px, 82vw);
+      height: min(440px, 42svh);
+      z-index: -1;
+      border-radius: 999px;
+      background:
+        radial-gradient(ellipse at center, rgba(244,238,231,.055), rgba(244,238,231,.018) 38%, transparent 74%),
+        radial-gradient(ellipse at center, rgba(91,36,32,.18), rgba(21,8,6,0) 62%);
+      filter: blur(.2px);
+    }
+
+
+
+    .brand-lockup {
+      position: absolute;
+      z-index: 3;
+      top: var(--brand-top);
+      left: 50%;
+      width: min(940px, 94vw);
+      text-align: center;
+      transform: translateX(-50%);
+      user-select: none;
+      isolation: isolate;
+    }
+
+    .brand-lockup::before,
+    .brand-lockup::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .brand-lockup::before {
+      display: none;
+    }
+
+    .brand-lockup::after {
+      top: -10px;
+      width: min(740px, 80vw);
+      height: 180px;
+      transform: translateX(-50%);
+      background:
+        radial-gradient(ellipse at center, rgba(244,238,231,.095) 0%, rgba(244,238,231,.028) 34%, rgba(91,36,32,.055) 58%, transparent 76%),
+        radial-gradient(ellipse at 50% 56%, rgba(142,59,46,.12) 0%, transparent 68%);
+      filter: blur(24px);
+      mix-blend-mode: screen;
+      z-index: -1;
+    }
+
+    .wordmark {
+      margin: 0;
+      opacity: 0;
+      color: transparent;
+      background: linear-gradient(180deg, rgba(255,251,246,.98) 0%, rgba(244,238,231,.95) 34%, rgba(223,211,199,.82) 67%, rgba(244,238,231,.94) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: clamp(50px, 6.25vw, 88px);
+      font-weight: 400;
+      line-height: .9;
+      letter-spacing: clamp(.27em, 2.25vw, .44em);
+      text-indent: clamp(.27em, 2.25vw, .44em);
+      text-shadow:
+        0 18px 42px rgba(0,0,0,.30),
+        0 0 18px rgba(244,238,231,.035);
+      transform: translate3d(0, 20px, 0) scale(.988);
+      filter: blur(8px);
+      clip-path: inset(0 38% 0 38% round 2px);
+      will-change: opacity, transform, filter, clip-path;
+    }
+
+    .studio-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(14px, 2.4vw, 30px);
+      width: 100%;
+      margin-top: clamp(18px, 2.2svh, 28px);
+      opacity: 0;
+      transform: translate3d(0, 14px, 0);
+      filter: blur(5px);
+    }
+
+    .studio-row::before,
+    .studio-row::after {
+      content: "";
+      flex: 0 0 clamp(44px, 6vw, 90px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(244,238,231,.30), transparent);
+      transform: scaleX(.32);
+      opacity: .54;
+    }
+
+    .studio {
+      display: block;
+      font-size: clamp(15px, 1.55vw, 24px);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: clamp(.42em, 1.25vw, .58em);
+      text-indent: .08em;
+      color: rgba(244,238,231,.76);
+      text-shadow: 0 0 18px rgba(244,238,231,.04), 0 10px 22px rgba(0,0,0,.22);
+    }
+
+    .nav-stage {
+      position: absolute;
+      z-index: 2;
+      top: var(--nav-top);
+      left: 50%;
+      width: min(1250px, 94vw);
+      transform: translateX(-50%);
+    }
+
+    .constellation {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .node {
+      cursor: pointer;
+      outline: none;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .node-shell {
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: translate3d(0, 20px, 0) scale(.987);
+      filter: blur(3px) drop-shadow(0 22px 34px rgba(0,0,0,.30));
+    }
+
+    .face-border {
+      fill: none;
+      stroke: rgba(244,238,231,.54);
+      stroke-width: 1.25;
+      vector-effect: non-scaling-stroke;
+      opacity: 0;
+      transition: stroke 520ms var(--ease-hover), stroke-width 520ms var(--ease-hover), opacity 520ms var(--ease-hover);
+    }
+
+    .face-fill {
+      stroke: rgba(244,238,231,.20);
+      stroke-width: 1;
+      vector-effect: non-scaling-stroke;
+      opacity: 0;
+      transition: opacity 540ms var(--ease-hover), stroke 540ms var(--ease-hover), filter 540ms var(--ease-hover);
+    }
+
+    .down .face-fill { fill: url(#fillDown); }
+    .up .face-fill { fill: url(#fillUp); }
+
+    .inner-light {
+      opacity: 0;
+      transition: opacity 680ms var(--ease-hover), transform 680ms var(--ease-hover);
+      transform-box: fill-box;
+      transform-origin: center;
+      mix-blend-mode: screen;
+    }
+
+    .node-content {
+      opacity: 0;
+      filter: blur(2px);
+      transition: opacity 520ms var(--ease-hover), filter 520ms var(--ease-hover);
+    }
+
+    .roman {
+      fill: rgba(244,238,231,.30);
+      font-size: 12px;
+      letter-spacing: .38em;
+      font-weight: 400;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .label {
+      fill: rgba(244,238,231,.90);
+      font-size: 21px;
+      letter-spacing: .13em;
+      font-weight: 500;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      text-shadow: 0 9px 26px rgba(0,0,0,.46);
+      transition: fill 520ms var(--ease-hover), letter-spacing 520ms var(--ease-hover);
+    }
+
+
+    .node:hover .node-shell,
+    .node:focus-visible .node-shell {
+      transform: translate3d(0, -1px, 0) scale(1.004);
+      filter: blur(0) drop-shadow(0 28px 42px rgba(0,0,0,.38));
+      transition: transform 640ms var(--ease), filter 640ms var(--ease), opacity 640ms var(--ease);
+    }
+
+    .node:hover .face-border,
+    .node:focus-visible .face-border {
+      opacity: .92;
+      stroke: rgba(244,238,231,.70);
+      stroke-width: 1.45;
+    }
+
+    .node:hover .face-fill,
+    .node:focus-visible .face-fill {
+      opacity: .96;
+      stroke: rgba(244,238,231,.36);
+    }
+
+    .node:hover .inner-light,
+    .node:focus-visible .inner-light { opacity: .76; transform: scale(1.018); }
+    .node:hover .node-content,
+    .node:focus-visible .node-content { opacity: 1; filter: blur(0); }
+    .node:hover .label,
+    .node:focus-visible .label { fill: rgba(255,250,244,.98); letter-spacing: .165em; }
+
+    .sweep-zone {
+      pointer-events: none;
+      opacity: 0;
+      mix-blend-mode: screen;
+      transition: opacity 760ms var(--ease-hover);
+    }
+
+    .hover-sweep {
+      opacity: 0;
+      fill: url(#sweepGlow);
+      filter: url(#sweepBlur);
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: translateX(-260px) skewX(-8deg) scaleX(1.38);
+      transition:
+        opacity 760ms var(--ease-hover),
+        transform 1180ms var(--ease);
+    }
+
+    .constellation:has(.node:hover) .node:not(:hover) .node-shell,
+    .constellation:has(.node:focus-visible) .node:not(:focus-visible) .node-shell {
+      opacity: .48;
+      filter: blur(.3px) drop-shadow(0 14px 24px rgba(0,0,0,.20));
+      transition:
+        opacity 560ms var(--ease-hover),
+        filter 560ms var(--ease-hover),
+        transform 560ms var(--ease-hover);
+    }
+
+    .node:hover .sweep-zone,
+    .node:focus-visible .sweep-zone {
+      opacity: 1;
+    }
+
+    .node:hover .hover-sweep,
+    .node:focus-visible .hover-sweep {
+      opacity: .74;
+      transform: translateX(230px) skewX(-8deg) scaleX(1.38);
+    }
+
+    .node:hover .roman,
+    .node:focus-visible .roman {
+      fill: rgba(244,238,231,.42);
+    }
+
+    .node.is-selected .face-border {
+      opacity: 1;
+      stroke: rgba(255,250,244,.86);
+      stroke-width: 1.7;
+    }
+
+    .node.is-selected .face-fill { opacity: 1; }
+    .node.is-selected .inner-light { opacity: .88; transform: scale(1.028); }
+    .node.is-selected .label { fill: rgba(255,250,244,1); letter-spacing: .175em; }
+
+    body.is-leaving .node:not(.is-selected) .node-shell {
+      opacity: .16;
+      transform: scale(.992);
+      filter: blur(1px) drop-shadow(0 8px 18px rgba(0,0,0,.18));
+      transition:
+        opacity var(--exit-ms) var(--ease),
+        transform var(--exit-ms) var(--ease),
+        filter var(--exit-ms) var(--ease);
+    }
+
+    body.is-leaving .node.is-selected .sweep-zone {
+      opacity: .86;
+    }
+
+    body.is-leaving .node.is-selected .hover-sweep {
+      opacity: .78;
+    }
+
+
+    .sigil {
+      position: fixed;
+      left: 50%;
+      bottom: clamp(20px, 3.2svh, 34px);
+      z-index: 3;
+      transform: translateX(-50%) translateY(10px);
+      opacity: 0;
+      color: rgba(244,238,231,.40);
+      font-size: clamp(9px, .75vw, 12px);
+      line-height: 1;
+      letter-spacing: .62em;
+      text-indent: .62em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    body.fonts-ready .wordmark {
+      animation: wordmarkIn 1320ms var(--ease) 80ms forwards;
+    }
+    body.fonts-ready .brand-lockup::after {
+      animation: mastheadAuraIn 1200ms var(--ease) 260ms forwards, mastheadBreath 22s ease-in-out 1.8s infinite;
+    }
+
+    body.fonts-ready .studio-row {
+      animation: studioIn 1050ms var(--ease) 700ms forwards;
+    }
+
+    body.fonts-ready .studio-row::before,
+    body.fonts-ready .studio-row::after {
+      animation: lineIn 1050ms var(--ease) 820ms forwards;
+    }
+
+    body.fonts-ready .ambient-disc {
+      animation: atmosphereIn 1450ms var(--ease) 900ms forwards;
+    }
+
+    body.fonts-ready .edge .node-shell {
+      animation: nodeSettle 1120ms var(--ease) 1320ms forwards;
+    }
+
+    body.fonts-ready .inner .node-shell {
+      animation: nodeSettle 1120ms var(--ease) 1640ms forwards;
+    }
+
+    body.fonts-ready .center .node-shell {
+      animation: nodeSettle 1120ms var(--ease) 1960ms forwards;
+    }
+
+    body.fonts-ready .edge .face-border {
+      animation: outlineIn 900ms var(--ease) 1360ms forwards;
+    }
+
+    body.fonts-ready .inner .face-border {
+      animation: outlineIn 900ms var(--ease) 1680ms forwards;
+    }
+
+    body.fonts-ready .center .face-border {
+      animation: outlineIn 900ms var(--ease) 2000ms forwards;
+    }
+
+    body.fonts-ready .edge .face-fill {
+      animation: fillIn 760ms var(--ease) 1540ms forwards;
+    }
+
+    body.fonts-ready .inner .face-fill {
+      animation: fillIn 760ms var(--ease) 1860ms forwards;
+    }
+
+    body.fonts-ready .center .face-fill {
+      animation: fillIn 760ms var(--ease) 2180ms forwards;
+    }
+
+    body.fonts-ready .edge .inner-light {
+      animation: lightIn 980ms var(--ease) 1710ms forwards;
+    }
+
+    body.fonts-ready .inner .inner-light {
+      animation: lightIn 980ms var(--ease) 2030ms forwards;
+    }
+
+    body.fonts-ready .center .inner-light {
+      animation: lightIn 980ms var(--ease) 2350ms forwards;
+    }
+
+    body.fonts-ready .edge .node-content {
+      animation: contentIn 720ms var(--ease) 1870ms forwards;
+    }
+
+    body.fonts-ready .inner .node-content {
+      animation: contentIn 720ms var(--ease) 2190ms forwards;
+    }
+
+    body.fonts-ready .center .node-content {
+      animation: contentIn 720ms var(--ease) 2510ms forwards;
+    }
+
+    body.fonts-ready .sigil {
+      animation: sigilIn 1000ms var(--ease) 2700ms forwards;
+    }
+
+    body.is-leaving .node:not(.is-selected) { opacity: .26; transition: opacity var(--exit-ms) var(--ease); }
+    body.is-leaving .brand-lockup,
+    body.is-leaving .sigil { opacity: .62; transition: opacity var(--exit-ms) var(--ease); }
+    body.is-leaving .node.is-selected .node-shell { transform: translate3d(0, -2px, 0) scale(1.012); }
+
+    @keyframes livingNoirDrift {
+      0% {
+        background-position: 50% 50%, 18% 57%, 82% 57%, 50% 50%;
+      }
+      45% {
+        background-position: 51.8% 49.2%, 16.5% 58.4%, 84.2% 55.8%, 50% 50%;
+      }
+      100% {
+        background-position: 48.6% 51.4%, 20.8% 55.8%, 80.4% 59.2%, 50% 50%;
+      }
+    }
+
+    @keyframes noirVeilBreath {
+      0% { transform: scale(1.02) translate3d(0, 0, 0); opacity: .54; }
+      50% { transform: scale(1.045) translate3d(-.8%, .45%, 0); opacity: .62; }
+      100% { transform: scale(1.03) translate3d(.7%, -.35%, 0); opacity: .56; }
+    }
+
+    @keyframes wordmarkIn {
+      0% { opacity: 0; transform: translate3d(0, 20px, 0) scale(.988); filter: blur(8px); clip-path: inset(0 38% 0 38% round 2px); }
+      56% { opacity: 1; filter: blur(0); }
+      100% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); filter: blur(0); clip-path: inset(0 0 0 0 round 2px); }
+    }
+
+    @keyframes studioIn {
+      0% { opacity: 0; transform: translate3d(0, 14px, 0); filter: blur(5px); }
+      100% { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
+    }
+
+    @keyframes lineIn {
+      0% { opacity: 0; transform: scaleX(.18); }
+      100% { opacity: .54; transform: scaleX(1); }
+    }
+
+    @keyframes brandSealIn {
+      0% { opacity: 0; transform: translateX(-50%) rotate(45deg) scale(.42); filter: blur(3px); }
+      100% { opacity: .78; transform: translateX(-50%) rotate(45deg) scale(.72); filter: blur(0); }
+    }
+
+    @keyframes mastheadAuraIn {
+      0% { opacity: 0; transform: translateX(-50%) scale(.88); }
+      100% { opacity: 1; transform: translateX(-50%) scale(1); }
+    }
+
+    @keyframes mastheadBreath {
+      0%, 100% { transform: translateX(-50%) scale(1); opacity: .92; }
+      50% { transform: translateX(-50%) scale(1.035); opacity: 1; }
+    }
+
+    @keyframes atmosphereIn {
+      0% { opacity: 0; transform: translate3d(-50%, 0, 0) scale(.92); }
+      100% { opacity: 1; transform: translate3d(-50%, 0, 0) scale(1); }
+    }
+
+
+
+    @keyframes nodeSettle {
+      0% { opacity: 0; transform: translate3d(0, 20px, 0) scale(.987); filter: blur(3px) drop-shadow(0 22px 34px rgba(0,0,0,.30)); }
+      100% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); filter: blur(0) drop-shadow(0 22px 34px rgba(0,0,0,.30)); }
+    }
+
+    @keyframes outlineIn {
+      0% { opacity: 0; stroke-dasharray: 0 900; }
+      100% { opacity: .82; stroke-dasharray: 900 0; }
+    }
+
+    @keyframes fillIn { 0% { opacity: 0; } 100% { opacity: .94; } }
+    @keyframes lightIn { 0% { opacity: 0; transform: scale(.82); } 100% { opacity: .56; transform: scale(.94); } }
+    @keyframes contentIn { 0% { opacity: 0; filter: blur(2px); } 100% { opacity: 1; filter: blur(0); } }
+    @keyframes sigilIn { 0% { opacity: 0; transform: translateX(-50%) translateY(10px); } 100% { opacity: 1; transform: translateX(-50%) translateY(0); } }
+
+    @media (max-height: 800px) and (min-width: 921px) {
+      :root {
+        --brand-top: clamp(134px, 22svh, 176px);
+        --nav-top: clamp(330px, 45.5svh, 362px);
+      }
+      .wordmark { font-size: clamp(48px, 6vw, 78px); }
+      .studio-row { margin-top: clamp(20px, 2.5svh, 30px); }
+      .sigil { bottom: 14px; }
+    }
+
+    @media (max-width: 920px) {
+      body { overflow-y: auto; }
+      .page {
+        min-height: 100svh;
+        overflow: visible;
+        padding: clamp(56px, 8svh, 84px) 24px 58px;
+      }
+      .brand-lockup,
+      .nav-stage,
+      .sigil {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        transform: none;
+      }
+      .brand-lockup { margin: 0 auto; }
+      .wordmark {
+        font-size: clamp(36px, 11vw, 68px);
+        letter-spacing: clamp(.22em, 3.8vw, .40em);
+        text-indent: clamp(.22em, 3.8vw, .40em);
+      }
+      .studio-row {
+        gap: 16px;
+        margin-top: 18px;
+      }
+      .nav-stage {
+        margin: clamp(48px, 7svh, 76px) auto 0;
+      }
+      .constellation { display: none; }
+      .mobile-nav {
+        display: grid;
+        gap: 14px;
+        width: min(520px, 100%);
+        margin: 0 auto;
+      }
+      .mobile-link {
+        display: grid;
+        grid-template-columns: 58px 1fr 32px;
+        align-items: center;
+        min-height: 78px;
+        padding: 0 18px;
+        border: 1px solid rgba(244,238,231,.20);
+        background:
+          radial-gradient(circle at 21% 50%, rgba(244,238,231,.08), transparent 38%),
+          linear-gradient(135deg, rgba(244,238,231,.055), rgba(244,238,231,.015));
+        color: rgba(244,238,231,.86);
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(5px);
+        transition: border-color 480ms var(--ease), background 480ms var(--ease), opacity 900ms var(--ease), transform 1100ms var(--ease), filter 1100ms var(--ease);
+      }
+      .mobile-link:hover,
+      .mobile-link:focus-visible {
+        outline: 1px solid rgba(244,238,231,.58);
+        outline-offset: 3px;
+        border-color: rgba(244,238,231,.42);
+        background:
+          radial-gradient(circle at 21% 50%, rgba(244,238,231,.13), transparent 40%),
+          linear-gradient(135deg, rgba(244,238,231,.075), rgba(244,238,231,.022));
+      }
+      .mobile-roman { color: rgba(244,238,231,.35); font-size: 11px; letter-spacing: .34em; }
+      .mobile-label { font-size: 15px; letter-spacing: .20em; text-transform: uppercase; }
+      .mobile-arrow { color: rgba(244,238,231,.38); font-size: 22px; justify-self: end; }
+      body.fonts-ready .mobile-link { opacity: 1; transform: translateY(0); filter: blur(0); }
+      .mobile-link:nth-child(1), .mobile-link:nth-child(5) { transition-delay: 1520ms; }
+      .mobile-link:nth-child(2), .mobile-link:nth-child(4) { transition-delay: 1880ms; }
+      .mobile-link:nth-child(3) { transition-delay: 2240ms; }
+      .ambient-disc { display: none; }
+      .sigil {
+        justify-content: center;
+        margin: 48px auto 0;
+        bottom: auto;
+      }
+    }
+
+    @media (min-width: 921px) {
+      .mobile-nav { display: none; }
+    }
+
+    @media (max-width: 560px) {
+      .page { padding-inline: 18px; }
+      .studio-row::before,
+      .studio-row::after { display: none; }
+      .studio { font-size: 15px; }
+      .mobile-link { grid-template-columns: 46px 1fr 26px; min-height: 70px; }
+      .sigil { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .001ms !important;
+      }
+      .wordmark,
+      .studio-row,
+      .ambient-disc,
+      .node-shell,
+      .face-border,
+      .face-fill,
+      .inner-light,
+      .node-content,
+      .sigil,
+      .mobile-link {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+    }
+  
+/* STUDIO FINAL EXIT VEIL — PATCH 14
+   Matches the HQ/Finance room-entry veil: selected door sharpens, page darkens,
+   and navigation happens after the espresso threshold closes. */
+.studio-exit-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse 46% 38% at 50% 46%, rgba(244,238,231,.070) 0%, rgba(91,36,32,.15) 38%, transparent 72%),
+    radial-gradient(ellipse 60% 56% at 50% 56%, rgba(64,24,22,.42) 0%, rgba(22,8,6,.72) 48%, rgba(9,4,3,.99) 100%),
+    linear-gradient(112deg, #170b09 0%, #090403 42%, #1d0a08 72%, #090403 100%);
+  backdrop-filter: blur(0) saturate(108%);
+  -webkit-backdrop-filter: blur(0) saturate(108%);
+  transition: opacity var(--exit-ms) var(--ease), backdrop-filter var(--exit-ms) var(--ease), -webkit-backdrop-filter var(--exit-ms) var(--ease);
+}
+.studio-exit-veil::before,
+.studio-exit-veil::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.studio-exit-veil::before {
+  width: min(820px, 78vw);
+  height: min(360px, 38svh);
+  border-radius: 999px;
+  background:
+    radial-gradient(ellipse at center, rgba(244,238,231,.085), rgba(244,238,231,.022) 36%, transparent 72%),
+    radial-gradient(ellipse at center, rgba(91,36,32,.20), transparent 66%);
+  filter: blur(22px);
+  mix-blend-mode: screen;
+  transition: opacity var(--exit-ms) var(--ease), transform var(--exit-ms) var(--ease);
+}
+.studio-exit-veil::after {
+  width: min(580px, 62vw);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(244,238,231,.22), transparent);
+  transform: translate(-50%, -50%) scaleX(.44);
+  transition: opacity var(--exit-ms) var(--ease), transform var(--exit-ms) var(--ease);
+}
+body.is-leaving .studio-exit-veil {
+  opacity: 1;
+  backdrop-filter: blur(10px) saturate(108%);
+  -webkit-backdrop-filter: blur(10px) saturate(108%);
+}
+body.is-leaving .studio-exit-veil::before {
+  opacity: .84;
+  transform: translate(-50%, -50%) scale(1.14);
+}
+body.is-leaving .studio-exit-veil::after {
+  opacity: .70;
+  transform: translate(-50%, -50%) scaleX(1.18);
+}
+body.is-leaving .brand-lockup,
+body.is-leaving .sigil,
+body.is-leaving .ambient-disc {
+  opacity: .34 !important;
+  filter: blur(3px);
+  transition: opacity var(--exit-ms) var(--ease), filter var(--exit-ms) var(--ease);
+}
+
+  </style>
+</head>
+<body data-build="threshold-final-2026-06-03-i">
+  <main class="page" aria-label="Moscatelli Studio digital hub">
+    <div class="studio-exit-veil" aria-hidden="true"></div>
+    <div class="ambient-disc" aria-hidden="true"></div>
+
+    <header class="brand-lockup" aria-label="Moscatelli Studio">
+      <h1 class="wordmark">MOSCATELLI</h1>
+      <div class="studio-row" aria-label="Studio">
+        <span aria-hidden="true"></span>
+        <div class="studio">STUDIO</div>
+        <span aria-hidden="true"></span>
+      </div>
+    </header>
+
+    <nav class="nav-stage" aria-label="Studio links">
+      <svg class="constellation" viewBox="0 0 1400 430" aria-labelledby="constellationTitle constellationDescription">
+        <title id="constellationTitle">Moscatelli Studio navigation</title>
+        <desc id="constellationDescription">Five aligned triangular navigation links for HQ, Finance, Website, Pitch Deck and Notion.</desc>
+
+        <defs>
+          <linearGradient id="fillDown" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f4eee7" stop-opacity=".14"/>
+            <stop offset=".46" stop-color="#f4eee7" stop-opacity=".045"/>
+            <stop offset="1" stop-color="#401816" stop-opacity=".23"/>
+          </linearGradient>
+
+          <linearGradient id="fillUp" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#f4eee7" stop-opacity=".07"/>
+            <stop offset=".44" stop-color="#f4eee7" stop-opacity=".038"/>
+            <stop offset="1" stop-color="#f4eee7" stop-opacity=".14"/>
+          </linearGradient>
+
+          <radialGradient id="nodeLight" cx="50%" cy="52%" r="50%">
+            <stop offset="0" stop-color="#f4eee7" stop-opacity=".23"/>
+            <stop offset=".36" stop-color="#f4eee7" stop-opacity=".07"/>
+            <stop offset="1" stop-color="#f4eee7" stop-opacity="0"/>
+          </radialGradient>
+
+          <linearGradient id="sweepGlow" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#f4eee7" stop-opacity="0"/>
+            <stop offset=".35" stop-color="#f4eee7" stop-opacity=".055"/>
+            <stop offset=".50" stop-color="#f4eee7" stop-opacity=".18"/>
+            <stop offset=".65" stop-color="#f4eee7" stop-opacity=".055"/>
+            <stop offset="1" stop-color="#f4eee7" stop-opacity="0"/>
+          </linearGradient>
+
+          <filter id="sweepBlur" x="-85%" y="-85%" width="270%" height="270%" color-interpolation-filters="sRGB">
+            <feGaussianBlur stdDeviation="18" result="blurredSweep" />
+            <feColorMatrix in="blurredSweep" type="matrix" values="1 0 0 0 0.96  0 1 0 0 0.90  0 0 1 0 0.82  0 0 0 .70 0" result="softenedSweep" />
+            <feMerge>
+              <feMergeNode in="softenedSweep" />
+            </feMerge>
+          </filter>
+
+          <clipPath id="clip-hq"><polygon points="12,70 352,70 182,374" /></clipPath>
+          <clipPath id="clip-finance"><polygon points="286,374 454,70 622,374" /></clipPath>
+          <clipPath id="clip-website"><polygon points="532,70 868,70 700,374" /></clipPath>
+          <clipPath id="clip-pitch"><polygon points="778,374 946,70 1114,374" /></clipPath>
+          <clipPath id="clip-notion"><polygon points="1048,70 1388,70 1218,374" /></clipPath>
+        </defs>
+
+        <a class="node node-link edge down" href="https://gianmoska-prog.github.io/Moscatelli-Project/" aria-label="Open HQ placeholder">
+          <g class="node-shell">
+            <polygon class="face-border" points="12,70 352,70 182,374" pathLength="900" />
+            <polygon class="face-fill" points="12,70 352,70 182,374" />
+            <polygon class="inner-light" points="64,92 207,92 121,246" fill="url(#nodeLight)" />
+            <g class="sweep-zone" clip-path="url(#clip-hq)"><polygon class="hover-sweep" points="-70,40 70,40 300,390 160,390" /></g>
+            <g class="node-content" transform="translate(182 216)">
+              <text class="roman" x="0" y="-30">I</text>
+              <text class="label" x="0" y="6">HQ</text>
+            </g>
+          </g>
+        </a>
+
+        <a class="node node-link inner up" href="https://gianmoska-prog.github.io/Finance-Suite/" aria-label="Open Finance placeholder">
+          <g class="node-shell">
+            <polygon class="face-border" points="286,374 454,70 622,374" pathLength="900" />
+            <polygon class="face-fill" points="286,374 454,70 622,374" />
+            <polygon class="inner-light" points="402,105 454,70 520,230 436,230" fill="url(#nodeLight)" />
+            <g class="sweep-zone" clip-path="url(#clip-finance)"><polygon class="hover-sweep" points="270,390 410,390 585,40 445,40" /></g>
+            <g class="node-content" transform="translate(454 248)">
+              <text class="roman" x="0" y="-30">II</text>
+              <text class="label" x="0" y="6">FINANCE</text>
+            </g>
+          </g>
+        </a>
+
+        <a class="node node-link center down" href="https://moscatelli-official.netlify.app/" aria-label="Open Website placeholder">
+          <g class="node-shell">
+            <polygon class="face-border" points="532,70 868,70 700,374" pathLength="900" />
+            <polygon class="face-fill" points="532,70 868,70 700,374" />
+            <polygon class="inner-light" points="594,92 790,92 704,258 616,258" fill="url(#nodeLight)" />
+            <g class="sweep-zone" clip-path="url(#clip-website)"><polygon class="hover-sweep" points="450,40 590,40 820,390 680,390" /></g>
+            <g class="node-content" transform="translate(700 216)">
+              <text class="roman" x="0" y="-30">III</text>
+              <text class="label" x="0" y="6">WEBSITE</text>
+            </g>
+          </g>
+        </a>
+
+        <a class="node node-link inner up" href="https://gianmoska-prog.github.io/Moscatelli/" aria-label="Open Pitch Deck placeholder">
+          <g class="node-shell">
+            <polygon class="face-border" points="778,374 946,70 1114,374" pathLength="900" />
+            <polygon class="face-fill" points="778,374 946,70 1114,374" />
+            <polygon class="inner-light" points="894,105 946,70 1012,230 928,230" fill="url(#nodeLight)" />
+            <g class="sweep-zone" clip-path="url(#clip-pitch)"><polygon class="hover-sweep" points="762,390 902,390 1077,40 937,40" /></g>
+            <g class="node-content" transform="translate(946 248)">
+              <text class="roman" x="0" y="-30">IV</text>
+              <text class="label" x="0" y="6">PITCH DECK</text>
+            </g>
+          </g>
+        </a>
+
+        <a class="node node-link edge down" href="https://www.notion.so/d05317fe18fe45b8a81b18f19f24b41d?v=5994e36b88d44b7289e5565e61ae5e7f" aria-label="Open Notion placeholder">
+          <g class="node-shell">
+            <polygon class="face-border" points="1048,70 1388,70 1218,374" pathLength="900" />
+            <polygon class="face-fill" points="1048,70 1388,70 1218,374" />
+            <polygon class="inner-light" points="1100,92 1243,92 1157,246" fill="url(#nodeLight)" />
+            <g class="sweep-zone" clip-path="url(#clip-notion)"><polygon class="hover-sweep" points="1010,40 1150,40 1380,390 1240,390" /></g>
+            <g class="node-content" transform="translate(1218 216)">
+              <text class="roman" x="0" y="-30">V</text>
+              <text class="label" x="0" y="6">NOTION</text>
+            </g>
+          </g>
+        </a>
+      </svg>
+
+      <div class="mobile-nav" aria-label="Studio links mobile">
+        <a class="mobile-link" href="https://gianmoska-prog.github.io/Moscatelli-Project/"><span class="mobile-roman">I</span><span class="mobile-label">HQ</span><span class="mobile-arrow">›</span></a>
+        <a class="mobile-link" href="https://gianmoska-prog.github.io/Finance-Suite/"><span class="mobile-roman">II</span><span class="mobile-label">FINANCE</span><span class="mobile-arrow">›</span></a>
+        <a class="mobile-link" href="https://moscatelli-official.netlify.app/"><span class="mobile-roman">III</span><span class="mobile-label">WEBSITE</span><span class="mobile-arrow">›</span></a>
+        <a class="mobile-link" href="https://gianmoska-prog.github.io/Moscatelli/"><span class="mobile-roman">IV</span><span class="mobile-label">PITCH DECK</span><span class="mobile-arrow">›</span></a>
+        <a class="mobile-link" href="https://www.notion.so/d05317fe18fe45b8a81b18f19f24b41d?v=5994e36b88d44b7289e5565e61ae5e7f"><span class="mobile-roman">V</span><span class="mobile-label">NOTION</span><span class="mobile-arrow">›</span></a>
+      </div>
+    </nav>
+
+    <div class="sigil" aria-hidden="true">Digital Atelier</div>
+  </main>
+
+  <script>
+    document.documentElement.classList.remove('no-js');
+
+    (function () {
+      const body = document.body;
+      const minimumDelay = new Promise(resolve => setTimeout(resolve, 320));
+      const timeout = new Promise(resolve => setTimeout(resolve, 3400));
+
+      async function waitForCinzel() {
+        if (!('fonts' in document)) return;
+        try {
+          await Promise.race([
+            Promise.all([
+              document.fonts.load('400 1em Cinzel'),
+              document.fonts.load('500 1em Cinzel'),
+              document.fonts.ready
+            ]),
+            timeout
+          ]);
+        } catch (error) {
+          await timeout;
+        }
+      }
+
+      Promise.all([minimumDelay, waitForCinzel()]).then(() => {
+        requestAnimationFrame(() => body.classList.add('fonts-ready'));
+      });
+
+      document.querySelectorAll('.node-link, .mobile-link').forEach(link => {
+        link.addEventListener('click', event => {
+          const href = link.getAttribute('href');
+          if (!href) return;
+          event.preventDefault();
+
+          document.querySelectorAll('.node').forEach(node => node.classList.remove('is-selected'));
+          const node = link.closest('.node');
+          if (node) node.classList.add('is-selected');
+
+          body.classList.add('is-leaving');
+          window.setTimeout(() => {
+            if (href.startsWith('#')) {
+              window.location.hash = href;
+              body.classList.remove('is-leaving');
+              if (node) node.classList.remove('is-selected');
+            } else {
+              window.location.href = href;
+            }
+          }, 560);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
