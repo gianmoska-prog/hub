@@ -4,15 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#140807" />
-  <title>MOSCATELLI Studio — Threshold Final</title>
-  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
+  <title>MOSCATELLI Studio — PWA</title>
+  <meta name="application-name" content="MOSCATELLI Studio" />
+  <meta name="description" content="MOSCATELLI Studio digital hub." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="MOSCATELLI" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+
 
   <!--
     MOSCATELLI NOIR THRESHOLD STABLE
     Brand-new file name and standalone build.
-    Verification flag: threshold-final-2026-06-03-i
+    Verification flag: studio-index-pwa-2026-06-03-l
 
     Single-file landing page for the Moscatelli Studio digital hub.
     The triangles are SVG-based, with one shared top/bottom register.
@@ -798,7 +806,7 @@ body.is-leaving .ambient-disc {
 
   </style>
 </head>
-<body data-build="threshold-final-2026-06-03-i">
+<body data-build="studio-index-pwa-2026-06-03-l">
   <main class="page" aria-label="Moscatelli Studio digital hub">
     <div class="studio-exit-veil" aria-hidden="true"></div>
     <div class="ambient-disc" aria-hidden="true"></div>
@@ -988,6 +996,14 @@ body.is-leaving .ambient-disc {
         });
       });
     })();
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
   </script>
 </body>
 </html>

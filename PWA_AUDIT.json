@@ -1,0 +1,38 @@
+{
+  "package": "moscatelli-studio-index-pwa-20260603-l",
+  "source_html": "/mnt/data/index(21).html",
+  "source_icon": "/mnt/data/favicon icon.png",
+  "files": [
+    "README.txt",
+    "icons/apple-touch-icon.png",
+    "icons/favicon-16.png",
+    "icons/favicon-32.png",
+    "icons/favicon-48.png",
+    "icons/icon-192.png",
+    "icons/icon-512.png",
+    "icons/maskable-192.png",
+    "icons/maskable-512.png",
+    "index.html",
+    "manifest.webmanifest",
+    "sw.js"
+  ],
+  "missing_referenced_assets": [],
+  "service_worker_syntax_ok": true,
+  "service_worker_syntax_stderr": "",
+  "manifest_valid_json": true,
+  "pwa_head_links_present": true,
+  "rounded_icons_created": [
+    "apple-touch-icon.png",
+    "favicon-16.png",
+    "favicon-32.png",
+    "favicon-48.png",
+    "icon-192.png",
+    "icon-512.png",
+    "maskable-192.png",
+    "maskable-512.png"
+  ],
+  "zip_bad_file": null,
+  "zip_file_count": 12,
+  "zip_bytes": 270734,
+  "zip_sha256": "ad0effaba1799892dba2d50ce8b384a890edc21f971be563a4142686ed2cd4b7"
+}
