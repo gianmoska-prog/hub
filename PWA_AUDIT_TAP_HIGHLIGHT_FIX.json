@@ -1,0 +1,13 @@
+{
+  "patch": "Studio PWA tap highlight fix",
+  "css_marker_present": true,
+  "tap_highlight_disabled": true,
+  "svg_link_outline_removed": true,
+  "focus_visible_kept": true,
+  "service_worker_syntax": {
+    "ok": true,
+    "stderr": ""
+  },
+  "manifest_valid": true,
+  "missing_referenced_assets": []
+}

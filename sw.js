@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'moscatelli-studio-index-pwa-20260603-l';
+const CACHE_VERSION = 'moscatelli-studio-pwa-20260603-m';
 const SHELL_ASSETS = [
   './',
   './index.html',

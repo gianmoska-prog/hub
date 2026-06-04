@@ -16,3 +16,5 @@ Icon notes:
 - The favicon/app icons were generated from the supplied Moscatelli monogram image.
 - Favicon and standard app icons include rounded corners.
 - Maskable icons include safe-area padding for phone home-screen masks.
+
+Patch M: removed the default mobile/PWA blue tap highlight rectangle from triangle links and bumped the service-worker cache.

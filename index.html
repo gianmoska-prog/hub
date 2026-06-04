@@ -804,9 +804,54 @@ body.is-leaving .ambient-disc {
   transition: opacity var(--exit-ms) var(--ease), filter var(--exit-ms) var(--ease);
 }
 
+  
+/* PWA TAP HIGHLIGHT FIX — PATCH M
+   Removes the default mobile/PWA blue tap highlight rectangle from the SVG triangle links
+   while keeping the ceremonial focus/hover visual language. */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+.node,
+.node-link,
+.mobile-link,
+.constellation,
+.constellation * {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none;
+}
+
+.node-link,
+.mobile-link {
+  outline: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.node-link:focus,
+.node-link:active,
+.mobile-link:focus,
+.mobile-link:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.node-link:focus-visible .face-border {
+  stroke: rgba(244,238,231,.78);
+  stroke-width: 1.55;
+}
+
+.mobile-link:focus-visible {
+  outline: 1px solid rgba(244,238,231,.58);
+  outline-offset: 3px;
+}
+
   </style>
 </head>
-<body data-build="studio-index-pwa-2026-06-03-l">
+<body data-build="studio-pwa-tap-highlight-fix-20260603-m">
   <main class="page" aria-label="Moscatelli Studio digital hub">
     <div class="studio-exit-veil" aria-hidden="true"></div>
     <div class="ambient-disc" aria-hidden="true"></div>
