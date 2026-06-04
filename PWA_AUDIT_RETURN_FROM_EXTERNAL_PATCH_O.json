@@ -1,0 +1,18 @@
+{
+  "patch": "Studio PWA return-from-external fix",
+  "source_zip": "moscatelli-studio-index-pwa-mobile-visual-patch-20260603-n.zip",
+  "css_marker_present": true,
+  "reset_function_present": true,
+  "pageshow_recovery_present": true,
+  "focus_recovery_present": true,
+  "visibility_recovery_present": true,
+  "safety_timer_present": true,
+  "tap_highlight_fix_preserved": true,
+  "mobile_visual_patch_preserved": true,
+  "manifest_valid": true,
+  "service_worker_syntax": {
+    "ok": true,
+    "stderr": ""
+  },
+  "missing_referenced_assets": []
+}

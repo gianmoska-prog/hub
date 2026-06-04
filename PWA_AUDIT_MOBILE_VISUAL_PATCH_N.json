@@ -1,0 +1,14 @@
+{
+  "patch": "Studio PWA mobile-only visual refinement",
+  "mobile_only_marker_present": true,
+  "desktop_scope_untouched_by_patch": true,
+  "wordmark_mobile_clipping_fix_present": true,
+  "mobile_cards_refined": true,
+  "tap_highlight_fix_preserved": true,
+  "manifest_valid": true,
+  "service_worker_syntax": {
+    "ok": true,
+    "stderr": ""
+  },
+  "missing_referenced_assets": []
+}

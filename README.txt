@@ -18,3 +18,7 @@ Icon notes:
 - Maskable icons include safe-area padding for phone home-screen masks.
 
 Patch M: removed the default mobile/PWA blue tap highlight rectangle from triangle links and bumped the service-worker cache.
+
+Patch N: mobile-only visual refinement for the Studio Index PWA. Desktop styles above 920px were left untouched.
+
+Patch O: added return-from-external recovery so closing a PWA browser sheet cannot leave Studio stuck in fade-out.
